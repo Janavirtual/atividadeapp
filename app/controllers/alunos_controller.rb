@@ -1,6 +1,8 @@
 class AlunosController < ApplicationController
   before_action :set_aluno, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_user!
+  before_action :authenticate_user!
+
+
   # GET /alunos
   # GET /alunos.json
   def index
@@ -10,8 +12,7 @@ before_action :authenticate_user!
   # GET /alunos/1
   # GET /alunos/1.json
   def show
-  end
-
+  end 
   # GET /alunos/new
   def new
     @aluno = Aluno.new
